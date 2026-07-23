@@ -5,11 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#47398b" />
     <meta name="description" content="G2410 高二（10）班的照片、班歌 MV 与音频。" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      as="image"
+      href="/branding/wallpaper-g2410-mobile.webp"
+      media="(max-width: 700px)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/branding/wallpaper-g2410-desktop-right.webp"
+      media="(min-width: 701px)"
+      fetchpriority="high"
+    />
+    <link rel="preload" as="fetch" href="/media/class-song.lrc" crossorigin />
+    <script>
+      if (new URLSearchParams(location.search).get("open") === "audio") {
+        document.documentElement.dataset.openAudio = "true";
+        const cover = document.createElement("link");
+        cover.rel = "preload";
+        cover.as = "image";
+        cover.href = "/branding/class-song-cover.webp";
+        cover.fetchPriority = "high";
+        document.head.append(cover);
+      }
+    </script>
+    <style>
+      * { box-sizing: border-box; }
+      html, body, #root { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+      body {
+        background: #181426 url("/branding/wallpaper-g2410-desktop-right.webp") center / cover no-repeat;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      .boot-shell { position: fixed; inset: 0; color: white; }
+      .boot-menu {
+        height: 28px;
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        padding: 0 16px;
+        background: rgba(16, 10, 70, 0.94);
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .boot-windowbar {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 14px;
+        color: #272631;
+        background: rgba(246, 246, 248, 0.96);
+      }
+      .boot-light { width: 12px; height: 12px; border-radius: 50%; }
+      .boot-light:nth-child(1) { background: #ff5f57; }
+      .boot-light:nth-child(2) { background: #febc2e; }
+      .boot-light:nth-child(3) { background: #28c840; }
+      .boot-title { margin: auto; padding-right: 52px; font-size: 13px; font-weight: 700; }
+      .boot-audio {
+        height: calc(100% - 76px);
+        display: grid;
+        place-items: center;
+        background:
+          linear-gradient(rgba(9, 7, 22, 0.52), rgba(9, 7, 22, 0.86)),
+          url("/branding/class-song-cover.webp") center / cover;
+      }
+      .boot-card { width: min(72vw, 560px); text-align: left; }
+      .boot-cover {
+        width: 100%;
+        aspect-ratio: 1;
+        display: block;
+        border-radius: 16px;
+        object-fit: contain;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.26);
+      }
+      .boot-card h1 { margin: 16px 0 4px; font-size: 24px; }
+      .boot-card p { margin: 0; color: rgba(255, 255, 255, 0.56); font-size: 14px; }
+      html:not([data-open-audio="true"]) .boot-window,
+      html[data-open-audio="true"] .boot-desktop { display: none; }
+      .boot-desktop { background: transparent; }
+      @media (max-width: 700px) {
+        body { background-image: url("/branding/wallpaper-g2410-mobile.webp"); background-position: center top; }
+        .boot-menu { gap: 17px; overflow: hidden; white-space: nowrap; }
+        .boot-windowbar { height: 42px; }
+        .boot-audio { height: calc(100% - 70px); }
+        .boot-card { width: min(72vw, 440px); }
+        .boot-card h1 { font-size: 21px; }
+      }
+    </style>
     <title>G2410 · 班级桌面</title>
-    <script type="module" crossorigin src="/assets/index-DFbJnRm8.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BruAIDw3.css">
+    <script type="module" crossorigin src="/assets/index-BYvWC8Er.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BCmwFpnJ.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main class="boot-shell boot-desktop" aria-hidden="true">
+        <div class="boot-menu"><span>●</span><span>访达</span><span>文件</span><span>编辑</span><span>显示</span><span>前往</span><span>窗口</span></div>
+      </main>
+      <main class="boot-shell boot-window" aria-hidden="true">
+        <div class="boot-menu"><span>●</span><span>访达</span><span>文件</span><span>编辑</span><span>显示</span><span>前往</span><span>窗口</span></div>
+        <div class="boot-windowbar">
+          <span class="boot-light"></span><span class="boot-light"></span><span class="boot-light"></span>
+          <span class="boot-title">班歌最终版.m4a</span>
+        </div>
+        <section class="boot-audio">
+          <div class="boot-card">
+            <img class="boot-cover" src="/branding/class-song-cover.webp" alt="" fetchpriority="high" />
+            <h1>Per Aspera Ad Astra</h1>
+            <p>G2410 · 班歌最终版</p>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
