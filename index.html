@@ -27,7 +27,6 @@
       media="(min-width: 701px)"
       fetchpriority="high"
     />
-    <link rel="preload" as="fetch" href="/media/class-song.lrc" crossorigin />
     <script>
       if (new URLSearchParams(location.search).get("open") === "audio") {
         document.documentElement.dataset.openAudio = "true";
@@ -37,6 +36,12 @@
         cover.href = "/branding/class-song-cover.webp";
         cover.fetchPriority = "high";
         document.head.append(cover);
+        const lyrics = document.createElement("link");
+        lyrics.rel = "preload";
+        lyrics.as = "fetch";
+        lyrics.href = "/media/class-song.lrc";
+        lyrics.crossOrigin = "anonymous";
+        document.head.append(lyrics);
       }
     </script>
     <style>
@@ -103,8 +108,8 @@
       }
     </style>
     <title>G2410 · 班级桌面</title>
-    <script type="module" crossorigin src="/assets/index-DOeRwtF1.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BP4n8tld.css">
+    <script type="module" crossorigin src="/assets/index-BFnO7pDa.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CZOOWSJo.css">
   </head>
   <body>
     <div id="root">
