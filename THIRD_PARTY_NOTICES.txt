@@ -19,3 +19,21 @@ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR P
 NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
 DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Liquid Glass React
+https://github.com/rdev/liquid-glass-react
+MIT License
+Copyright (c) 2025 MAX ROVENSKY
+
+Motion Primitives Dock
+https://github.com/ibelick/motion-primitives
+MIT License
+Copyright (c) 2024 ibelick
+
+macOS Tahoe Portfolio icon assets
+https://github.com/nerdynikhil/macos-tahoe-portfolio
+MIT License
+Copyright (c) 2025 Nikhil Barik (nerdynikhil)
+
+The MIT permission notice and warranty disclaimer printed above apply to these
+three components and their respective copyright holders.
